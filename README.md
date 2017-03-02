@@ -11,3 +11,6 @@ bauble: 小玩意儿
 * NaiveBayes C++的naiveBayes
 * CNN/cifar_wide_resnet_tl.py wide_resnet TL的example
 * Tensorflow/RNN/rcnn_1.py RNN分类垃圾邮件
+* Tensorflow/CNN/cifar_wide_resnet_tl.py tensorlayer宽Resnet
+* Tensorflow/CNN/ious.py IOU计算
+* Preceptron 感知机

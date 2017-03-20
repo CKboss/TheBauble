@@ -14,3 +14,4 @@ bauble: 小玩意儿
 * Tensorflow/CNN/cifar_wide_resnet_tl.py tensorlayer宽Resnet
 * Tensorflow/CNN/ious.py IOU计算
 * Preceptron 感知机
+* AutoGrad 求导数Demo

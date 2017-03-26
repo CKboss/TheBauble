@@ -13,5 +13,7 @@ bauble: 小玩意儿
 * Tensorflow/RNN/rcnn_1.py RNN分类垃圾邮件
 * Tensorflow/CNN/cifar_wide_resnet_tl.py tensorlayer宽Resnet
 * Tensorflow/CNN/ious.py IOU计算
+* Tensorflow/CNN/Densenet densenet [DenseNet](http://arxiv.org/abs/1608.06993)
+* Tensorflow/CNN/Resnet Resnet Wide resnet
 * Preceptron 感知机
 * AutoGrad 求导数Demo

@@ -153,7 +153,7 @@ class DenseNet(object):
                     self.saver.save(self.sess,savepath)
                     
                     test_imgs, test_lagels = unit.getTestData()
-                    feed_dict = {self.images:imgs,self.labels:labels,self.keep_prob : 1}
+                    feed_dict = {self.images:test_imgs,self.labels:test_lagels,self.keep_prob : 1}
                     
                     test_acc = self.sess.run([self.acc],feed_dict=feed_dict)
                     
@@ -164,15 +164,24 @@ class DenseNet(object):
         pass
 
     def JustTest(self):
-        pass
+        
+        al = 0
+        for i in range(100):
+            test_imgs, test_lagels = unit.getTestData()
+            feed_dict = {self.images:test_imgs,self.labels:test_lagels,self.keep_prob : 1}
+            test_acc = self.sess.run([self.acc],feed_dict=feed_dict)
+            al = al + test_acc[0]
+            print('test acc: ',test_acc)
+        print('last: ',al/100)
+         
 
 if __name__=='__main__':
 
     DS = DenseNet()
     DS.genDenseNet()
-    DS.initSess()
-    DS.JustTrain()
-    
+    DS.initSess('/tmp/log/Cifar10_100400.ckpt')
+    #DS.JustTrain()
+    DS.JustTest()
 
 
 
